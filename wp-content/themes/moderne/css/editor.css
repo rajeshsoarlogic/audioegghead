@@ -1,0 +1,431 @@
+/* editor css */
+body {
+    background: #fff;
+    color: #686868;
+	font-family: Tahoma, Arial, Sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;		
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: Oswald,"Arial Narrow",Arial,sans-serif;
+	font-weight: 500;
+	line-height: 1.1;
+	margin: 0 0 1rem;
+}
+h1, h2, h3, h4, h5, h6,
+.entry-title a, .entry-title a:visited {
+	color: #333;
+}
+
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.75rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.25rem;
+}
+h5 {
+	font-size: 1.125rem;
+}
+h6 {
+	font-size: 1.063rem;
+}
+
+/* other */
+p {
+	margin: 0 0 1.75rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* blockquotes */
+blockquote {
+    display: block;
+    padding: 15px 20px 15px 55px;
+    margin: 0 0 30px;
+    position: relative;
+   font-family: Georgia, serif;
+    font-size: 1.125rem;
+    font-style: italic;
+	line-height: 1.5;
+}
+
+blockquote::before{
+	content: "\201C"; /*Unicode for Left Double Quote*/
+	/*Font*/
+	font-family: Georgia, serif;
+	font-size: 3.750rem;
+	font-weight: bold;
+	color: inherit;
+	/*Positioning*/
+	position: absolute;
+	left: 10px;
+	top:-3px;
+}
+
+blockquote::after{
+	/*Reset to make sure*/
+	content: "";
+}
+
+blockquote p {
+    margin-bottom: 6px;
+	opacity: 0.9;
+}
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+blockquote a{
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 3px;
+}
+
+blockquote a:hover{
+	opacity: 0.8;
+}
+cite,
+blockquote cite {
+    font-size: 75%;
+}
+blockquote cite:before {
+    content: "\2014";
+    font-family: Arial,sans-serif;
+}
+blockquote.alignleft, 
+blockquote.alignright {
+    margin-bottom: 0;
+}
+blockquote.alignleft, 
+blockquote.alignright {
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+address {
+    margin-bottom: 1.6rem;
+}
+
+/* links */
+a {
+	color: #d67a61;
+	text-decoration: none;
+}
+a:visited {
+	color: #eab5a7;
+}
+a:hover, 
+a:focus, 
+a:active {
+	color: #7094d0;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/* edit link */
+ul.entry-footer {
+    list-style: none;
+    margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+hr {
+	background-color: #dedede;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+hr.spacer {
+	background: transparent;
+	height: 2.5rem;
+	margin: 0;
+}
+ul,
+ol {
+	margin: 0 0 1.75em 1.25em;
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 1.5em;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 0 1.75em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1rem 1.75em;
+	line-height: 1.5;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+figure {
+	/* Extra wide images within figure tags don't overflow the content area. */
+	margin: 1em 0;
+	position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	border-bottom: 1px solid #efefef;
+	border-color: #ebebeb;
+	margin: 1rem 0 2rem;
+	text-align: left;
+	width: 100%;
+}
+table caption {
+	color: #989898;
+    padding: 0 0 5px 0;
+    width: auto;
+    font-style: italic;
+    text-align: right;
+    font-size: 12px;
+}
+thead th {
+    background-color: #dcdcdc;
+	color: #222;
+}
+th, td {
+	padding: 6px
+}
+
+th {
+	font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 9px 12px;
+	border: 1px solid #ebebeb;	
+    border-left: none;
+    border-top: none;
+}
+tr:nth-child(odd) {
+    background: #f8f8f8;
+}
+tr th:first-child, 
+tr td:first-child {
+	border-color: #ebebeb;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+tr:first-child th, 
+tr:first-child td {
+	border-color: #ebebeb;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+td {
+    padding: 9px 12px;
+	border: 1px solid #ebebeb;	
+    border-left: none;
+    border-top: none;
+}
+tr th:first-child, 
+tr td:first-child {
+	border-color: #ebebeb;	
+    border-left-style: solid;
+    border-left-width: 1px;	
+}
+
+/* code */
+var {
+	font-family: Monaco, Consolas;
+}
+code {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 1rem;
+	font-size: 0.9375rem;
+    padding: 0 0.5rem;	
+}
+code {
+    background-color: #eeeeee;
+    color: #b74747;
+}
+pre {
+    position: relative;
+    max-width: 800px;
+    padding: 30px 15px;
+    background: #f7f7f7;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 0.938rem;
+    color: #656565;
+    border-left: 10px solid #ccc;
+}
+pre code {
+	padding: 0;
+    color: #3f3b36;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+	vertical-align: middle;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+.wp-caption {
+	margin-bottom: 1.5rem;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+
+	margin: 0.813rem 0;
+}
+.wp-caption-text {
+	font-family: Oswald,"Arial Narrow",Arial,sans-serif;
+	font-size: 1rem;
+    padding: 8px 0 0;
+    text-align: center;
+}
+.gallery {
+    margin: 3rem -20px 0;
+}
+.entry-content .gallery {
+    margin: 3rem -20px 2rem;
+}
+.gallery-item {
+	display: inline-block;
+	margin: 5px 0 2rem;
+	padding: 0 20px;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.gallery-icon {
+	background-color: #3e4a5f;
+	padding: 4px 4px 0;
+    text-align: center;
+}
+.gallery-icon img {
+    display: block;
+    margin: auto;
+}
+.gallery-columns-2 .gallery-item,
+.gallery-columns-3 .gallery-item,
+.gallery-columns-4 .gallery-item,
+.gallery-columns-5 .gallery-item,
+.gallery-columns-6 .gallery-item,
+.gallery-columns-7 .gallery-item,
+.gallery-columns-8 .gallery-item,
+.gallery-columns-9 .gallery-item {
+	max-width: 100%;
+}
+.gallery-caption {
+    letter-spacing: 1px;
+    padding: 10px;
+    position: relative;
+    background-color: #3e4a5f;
+    color: #fff;
+}
+
+
+/* Alignments */
+.alignleft {
+	display: inline;
+	float: left;
+    margin: 0 30px 20px 0;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+    margin: 0 0 20px 30px;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 0 auto 20px;
+}
+
+.alignnone {
+	margin: 0 0 20px;
+}
+
+/* Forms */
+.button,
+.button:visited,
+button {
+    background: #222;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-family:  Oswald,"Arial Narrow",Arial,sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 0.813em 0.875rem 0.75rem;
+    text-transform: uppercase;
+}
+.button:hover,
+button:hover,
+button:focus {
+	background: #d67a61;
+	cursor: pointer;
+}
